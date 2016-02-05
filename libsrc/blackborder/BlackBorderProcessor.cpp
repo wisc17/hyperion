@@ -1,10 +1,13 @@
 //*
 #include <iostream>
-/*
+
 #include <iomanip>
+using std::setw;
+/*
+
 using std::cout;
 using std::endl;
-using std::setw;
+
 using std::left;
 //*/
 // Blackborder includes
@@ -47,7 +50,7 @@ bool BlackBorderProcessor::updateBorder(const BlackBorder & newDetectedBorder)
 // makes it look like the border detectionn is not working - since the new 3 line detection algorithm is more precise this became a problem specialy in dark scenes
 // wisc
 
-//	std::cout << "c: " << setw(2) << _currentBorder.verticalSize << " " << setw(2) << _currentBorder.horizontalSize << " p: " << setw(2) << _previousDetectedBorder.verticalSize << " " << setw(2) << _previousDetectedBorder.horizontalSize << " n: " << setw(2) << newDetectedBorder.verticalSize << " " << setw(2) << newDetectedBorder.horizontalSize << " c:i " << setw(2) << _consistentCnt << ":" << setw(2) << _inconsistentCnt << std::endl;
+	std::cout << _detectionMode << " c: " << setw(2) << _currentBorder.verticalSize << " " << setw(2) << _currentBorder.horizontalSize << " p: " << setw(2) << _previousDetectedBorder.verticalSize << " " << setw(2) << _previousDetectedBorder.horizontalSize << " n: " << setw(2) << newDetectedBorder.verticalSize << " " << setw(2) << newDetectedBorder.horizontalSize << " c:i " << setw(2) << _consistentCnt << ":" << setw(2) << _inconsistentCnt << std::endl;
 
 	// set the consistency counter
 	if (newDetectedBorder == _previousDetectedBorder)
